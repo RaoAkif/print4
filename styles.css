@@ -1,0 +1,257 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+#form-container-wrapper {
+    width: 100%;
+    max-width: 480px; /* Mobile max width */
+}
+
+/* Card Styles */
+.card {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+}
+
+.divider {
+    width: 1px;
+    height: 25px;
+    background-color: #333;
+    margin: 0 8px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Section Styles */
+.section {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+.section-label i {
+    margin-right: 6px;
+    font-size: 16px;
+}
+
+/* Field Styles */
+.field {
+    display: flex;
+    align-items: baseline;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.field label {
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.field span {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.field input {
+    width: 100%;
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Separate lines for Name and Mobile # */
+.inline-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button-container button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-button {
+    background-color: #007bff;
+}
+
+.print-button:hover {
+    background-color: #0056b3;
+}
+
+.clear-button {
+    background-color: #dc3545;
+}
+
+.clear-button:hover {
+    background-color: #c82333;
+}
+
+.add-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.add-button {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+/* Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #print-container, #print-container * {
+        visibility: visible;
+    }
+
+    #print-container {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        max-height: calc(50vh - 20px);
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .print-card {
+        padding: 10px;
+        margin: 40px 0;
+        border-radius: 6px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .print-card:nth-of-type(2n) {
+        margin-bottom: 160px;
+    }
+
+    .print-card-header {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .print-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .print-divider {
+        height: 20px;
+    }
+
+    .print-title {
+        font-size: 18px;
+    }
+
+    .print-section {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+    }
+
+    .print-section-label {
+        font-size: 14px;
+    }
+
+    .print-field {
+        font-size: 14px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .print-field label {
+        font-weight: bold;
+        width: 100px;
+        margin-right: 12px;
+    }
+
+    .print-inline-fields .print-field {
+        flex: 1;
+        min-width: 0;
+    }
+}

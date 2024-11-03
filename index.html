@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postal Package Delivery Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="form-container-wrapper">
+    <div id="form-container">
+        <div class="card" id="card-content">
+            <div class="card-header">
+                <img src="./logo.png" alt="Logo" class="logo">
+                <div class="divider"></div>
+                <div class="title">MKAS Traders</div>
+            </div>
+
+            <!-- To Receiver Section -->
+            <div class="section">
+                <div class="section-label"><i>📦</i> To&nbsp;Receiver</div>
+                <div class="inline-fields">
+                    <div class="field name-field">
+                        <label for="receiver-name">Name:</label>
+                        <input type="text" id="receiver-name" placeholder="Receiver's name">
+                    </div>
+                    <div class="field contact-field">
+                        <label for="receiver-mobile">Mobile #:</label>
+                        <input type="text" id="receiver-mobile" placeholder="Mobile number">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="receiver-address">Address:</label>
+                    <input type="text" id="receiver-address" placeholder="Full address" class="multi-line">
+                </div>
+            </div>
+
+            <!-- From Sender Section -->
+            <div class="section">
+                <div class="section-label"><i>📮</i> From&nbsp;Sender</div>
+                <div class="field">
+                    <label>Name:</label>
+                    <span id="sender-name">Rao Ahsen Riaz</span>
+                </div>
+                <div class="field">
+                    <label>Mobile #:</label>
+                    <span id="sender-mobile">03014649956</span>
+                </div>
+                <div class="field">
+                    <label>Address:</label>
+                    <span id="sender-address">82 Patiala House, Race Course Road, Lahore</span>
+                </div>
+            </div>
+
+            <!-- Package Details Section -->
+            <div class="section">
+                <div class="section-label"><i>📋</i> Package&nbsp;Information</div>
+                <div class="field">
+                    <label for="amount">Amount (Rs.):</label>
+                    <input type="text" id="amount" placeholder="Amount">
+                </div>
+                <div class="field">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="text" id="weight" placeholder="Weight">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Form Button -->
+<div class="add-button-container">
+    <button class="add-button" onclick="addForm()">+</button>
+</div>
+
+<!-- Buttons to create PDF and clear form -->
+<div class="button-container">
+    <button class="print-button">Download PDF</button>
+    <button class="clear-button" onclick="clearForm()">Clear All Forms</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
